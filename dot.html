@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: #270045;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.loading__screen--container { 
+  width: 600px;
+  height: 500px;
+  display: grid;
+  place-items: center;
+}
+.loading__screen--loader {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    height: 75%;
+    overflow: hidden;
+}
+.loading__screen--first-line,
+.loading__screen--second-line {
+    display: flex;
+    justify-content: space-around;
+    background: tomato;
+    position: relative;
+    top: -50px;
+}
+.loading__screen--second-line {
+    top: -100px;
+}
+.loading__screen--loader .loading__screen--box1 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #faa000 0, #dc6302 100%);
+    border-radius: 50%;
+    animation: pingpong ease 1.4s alternate;
+    box-shadow: 0 0 2px rgba(139, 129, 129, 0.1);
+}
+.loading__screen--loader .loading__screen--box2 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #0d772d 0, #05d428 100%);
+    border-radius: 50%;
+    animation: pingpong ease 1.4s alternate;
+}
+.loading__screen--loader .loading__screen--box3 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #170da7 0, #0206f8 100%);
+    border-radius: 50%;
+    animation: pingpong ease 1.4s alternate;
+}
+.loading__screen--loader .loading__screen--box4 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #5c5b5b 0, #9b9b9b 100%);
+    border-radius: 50%;
+    animation: pingpong ease 1.4s alternate;
+}
+.loading__screen--loader .loading__screen--box5 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #167a48 0, #18d366 100%);
+    border-radius: 50%;
+    animation: pingpong-second 1s ease 1.4s forwards;
+}
+.loading__screen--loader .loading__screen--box6 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #8a1276 0, #db05ad 100%);
+    border-radius: 50%;
+    animation: pingpong-second 1s ease 1.4s forwards;
+}
+.loading__screen--loader .loading__screen--box7 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #066575 0, #05bdeb 100%);
+    border-radius: 50%;
+    animation: pingpong-second 1s ease 1.4s forwards;
+}
+.loading__screen--loader .loading__screen--box8 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #7e720d 0, #cddb05 100%);
+    border-radius: 50%;
+    animation: pingpong-second 1s ease 1.4s forwards;
+}
+.loading__screen--third-line {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -150px;
+}
+.loading__screen--mark {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #808080 0, #f0f0f0 100%);
+    border-radius: 50%;
+    animation: pingpong-third 1s ease 1.4s forwards;
+}
+
+@keyframes pingpong {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(430%);
+    }
+    100% {
+        transform: translateY(850%);
+    }
+}
+@keyframes pingpong-second {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(430%);
+    }
+}
+@keyframes pingpong-third {
+    from {
+        transform: translateY(650%);
+    }
+    to {
+        transform: translateY(600%);
+    }
+}
+</style>
+</head>
+<body>
+
+    <div class="loading__screen--container">
+        <div class="loading__screen--loader">
+            <div class="loading__screen--first-line">
+                <div class="loading__screen--box1"></div>
+                <div class="loading__screen--box2"></div>
+                <div class="loading__screen--box3"></div>
+                <div class="loading__screen--box4"></div>
+            </div>
+            <div class="loading__screen--second-line">
+                <div class="loading__screen--box5"></div>
+                <div class="loading__screen--box6"></div>
+                <div class="loading__screen--box7"></div>
+                <div class="loading__screen--box8"></div>
+            </div>
+            <div class="loading__screen--third-line">
+                <div class="loading__screen--mark"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
